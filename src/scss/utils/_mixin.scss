@@ -96,3 +96,8 @@
   
 }
 
+//ratio 믹스인
+
+@mixin ratio($w:16, $h:9){
+  aspect-ratio: $w / $h;
+}

@@ -1,6 +1,9 @@
 @use "./color" as var;
 @use "./unit" as *;
+@use "./flexbox" as *;
 
+
+//맵 type
 $colors: (
   "Book": var.$green,
   "News": var.$yellow,
@@ -21,7 +24,11 @@ $colors: (
   background-image: url(./../assets/images/sprite_main.png);
   background-repeat: no-repeat;
   padding-left: rem(64px);
+  font-size: rem(18px);
+  font-weight: 700;
+  @include flexbox(column,center);
 
+  //리스트 type
   $sprites: Book, Board, News, Favorite, Twitter;
   $x: 0;
   $y: 0;

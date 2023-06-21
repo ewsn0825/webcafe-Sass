@@ -10,10 +10,6 @@
 
   @include desktop{
     @include containerMax;
-    // grid-template-columns: repeat(12,1fr);
-    // grid-template-rows: auto;
-    // row-gap: 16px;
-    // column-gap: 20px;
     @include gridbox(12,1fr,16px,20px);
     grid-template-areas: "news news news news news news news news news news news news"
     "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
@@ -21,88 +17,33 @@
   }
 
   @include mobile{
-    // grid-template-columns: 100%;
-    // grid-template-rows: auto;
-    // row-gap: 16px;
-
+    
     @include gridbox(1,100%,16px);
   }
 
   
-  
 }
 
-@include desktop{
-  //추천 서적
-  .book{
-    grid-area: book;
-  }
-  //새소식
-  .news{
-    grid-area: news;
-  }
-  //게시판
-  .board{
-    grid-area: board;
-  }
-  //인기 사이트
-  .favorite{
-    grid-area: favorite;
-  }
-  //트위터
-  .twitter{
-    grid-area: twitter;
-  }
+//추천 서적
+.book{
+  grid-area: book;
+}
+//새소식
+.news{
+  grid-area: news;
+
+  @include iframeRatio;
+}
+//게시판
+.board{
+  grid-area: board;
+}
+//인기 사이트
+.favorite{
+  grid-area: favorite;
+}
+//트위터
+.twitter{
+  grid-area: twitter;
 }
 
-/* 공통 스타일 */
-// .accentBook{
-//   color: $accent-book;
-// }
-
-// .accentNews{
-//   color: $accent-news;
-// }
-
-// .accentTwitter{
-//   color: $accent-twitter;
-// }
-
-// .accentFavorite{
-//   color: $accent-favorite;
-// }
-// .accentBoard{
-//   color: $accent-board;
-// }
-
-// .sprite{
-//   min-height:rem(60px);
-//   padding-left:rem(64px);
-//   background-image:url(../images/sprite_main.png);
-//   background-repeat:no-repeat;
-//   font-size: rem(18px);
-//   font-weight: 700;
-
-//   @include flexbox(column,center);
-
-//   [class*="enTitle"]{
-//     font-size: rem(16px);
-//     font-weight: 400;
-//   }
-// }
-
-// .spriteBook{
-//   background-position:0 0
-// }
-// .spriteBoard{
-//   background-position:0 -115px
-// }
-// .spriteNews{
-//   background-position:0 -230px
-// }
-// .spriteFavorite{
-//   background-position:0 -345px
-// }
-// .spriteTwitter{
-//   background-position:0 -460px
-// }
