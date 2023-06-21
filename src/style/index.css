@@ -613,6 +613,15 @@ legend {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+@media (max-width: 767px) {
+  .appMain {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: auto;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+  }
+}
 @media (min-width: 768px) {
   .appMain {
     max-width: 64rem;
@@ -626,51 +635,45 @@ legend {
     grid-template-areas: "news news news news news news news news news news news news" "book book book book twitter twitter twitter twitter twitter favorite favorite favorite" "book book book book . board board board board board board board";
   }
 }
-@media (max-width: 767px) {
-  .appMain {
-    display: grid;
-    grid-template-columns: repeat(1, 100%);
-    grid-template-rows: auto;
-    grid-row-gap: 1rem;
-    grid-column-gap: 1rem;
+
+@media (min-width: 768px) {
+  .book {
+    grid-area: book;
+  }
+  .news {
+    grid-area: news;
+  }
+  .board {
+    grid-area: board;
+  }
+  .favorite {
+    grid-area: favorite;
+  }
+  .twitter {
+    grid-area: twitter;
   }
 }
-.appMain .book {
-  grid-area: book;
-}
-.appMain .book__cover {
-  width: 60%;
+.book__cover {
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-.appMain .book__coverCaption {
-  margin-top: 0.75rem;
-}
-.appMain .book__info {
+.book__info {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: stretch;
+  column-gap: 0.5rem;
 }
-.appMain .book .ratingstar {
-  font-size: 1.5rem;
-}
-.appMain .news {
-  grid-area: news;
-}
-.iframeWrapper {
-  aspect-ratio: 1.7777777778;
+.ratingStar {
+  width: 100%;
+  text-align: center;
+  font-size: 2.25rem;
 }
 
-.appMain .board {
-  grid-area: board;
-}
-.appMain .favorite {
-  grid-area: favorite;
-}
-.appMain .twitter {
-  grid-area: twitter;
+.iframeWrapper {
+  aspect-ratio: 1.7777777778;
 }
 
 /*# sourceMappingURL=index.css.map */
