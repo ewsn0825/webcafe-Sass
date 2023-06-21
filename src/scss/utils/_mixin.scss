@@ -13,10 +13,10 @@
   left: $l;
 
 }
-@mixin posRighttTop($r:0, $t:0){
+@mixin posRightTop($r:0, $t:0){
   @include pos;
   top: $t;
-  left: $r;
+  right: $r;
 }
 
 @mixin posCenterX{
@@ -106,4 +106,17 @@
 @mixin respons($width: max-width,$height:auto) {
   #{$width}: 100%;
   height: $height;
+}
+
+@mixin textOver{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//오브젝트
+@mixin fit($posX:50%,$posY:50%,$fit:cover){
+  object-fit: $fit;
+  object-position: $posX,$posY;
+
 }
