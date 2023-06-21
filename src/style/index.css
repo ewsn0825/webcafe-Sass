@@ -379,27 +379,90 @@ legend {
   font-size: 0.875rem;
 }
 
+.button {
+  border: 0;
+  background: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+.button--fill {
+  background: #988574;
+  color: white;
+}
+.button--outline {
+  color: #988574;
+  border-color: 1 solid currentColor;
+}
+
+.button--burger {
+  position: relative;
+  background: #38302e;
+}
+@media (max-width: 767px) {
+  .button--burger {
+    width: 36px;
+    height: 36px;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top: 4.0625rem;
+    right: 1.25rem;
+  }
+  .button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
+    background: white;
+    width: 100%;
+    height: 20%;
+    border-radius: 0.625rem;
+    left: 0;
+  }
+  .button--burgerBarTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .button--burgerBarMiddle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .button--burgerBarBottom {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+}
+@media (min-width: 768px) {
+  .button--burger {
+    display: none;
+  }
+}
+
 .appHeader {
-  background: yellow;
   padding: 1rem 1.25rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .appHeader {
+    background: blue;
+  }
 }
 @media (max-width: 767px) {
   .appHeader {
-    background: #38302e;
     color: #ffffff;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
   }
 }
 @media (min-width: 768px) {
   .appHeader {
     position: relative;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -421,7 +484,6 @@ legend {
 }
 
 .memberOnly {
-  background: green;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -434,11 +496,11 @@ legend {
 }
 
 .searchForm__group {
-  background: blue;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: stretch;
+  gap: 1rem;
 }
 @media (max-width: 767px) {
   .searchForm__group .formInput {
@@ -447,7 +509,7 @@ legend {
 }
 @media (min-width: 768px) {
   .searchForm__group .formInput {
-    width: 28.75rem;
+    width: 25rem;
   }
 }
 
