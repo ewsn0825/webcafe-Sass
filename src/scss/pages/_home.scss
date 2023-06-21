@@ -21,29 +21,46 @@
     @include gridbox(1,100%,16px);
   }
 
+  //추천 서적
+  .book{
+    grid-area: book;
+    &__cover{
+      width: 60%;
+      @include autoMargin;
+      text-align: center;
+    }
+    &__coverCaption{
+      margin-top: rem(12px);
+    }
+    &__info{
+      @include flexbox(column,center);
+    }
+    .ratingstar{
+      font-size: rem(24px);
+    }
+  }
+  //새소식
+  .news{
+    grid-area: news;
+    @at-root .iframeWrapper{
+      @include ratio;
+    }
+    
+  }
+  //게시판
+  .board{
+    grid-area: board;
+  }
+  //인기 사이트
+  .favorite{
+    grid-area: favorite;
+  }
+  //트위터
+  .twitter{
+    grid-area: twitter;
+  }
+
   
 }
 
-//추천 서적
-.book{
-  grid-area: book;
-}
-//새소식
-.news{
-  grid-area: news;
-
-  @include iframeRatio;
-}
-//게시판
-.board{
-  grid-area: board;
-}
-//인기 사이트
-.favorite{
-  grid-area: favorite;
-}
-//트위터
-.twitter{
-  grid-area: twitter;
-}
 
