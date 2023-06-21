@@ -24,8 +24,9 @@
 
 .button--burger{
   position: relative;
-  background: $dark-brown;
+  // background: $dark-brown;
   @include mobile{
+    background: transparent;
     width: 36px;
     height: 36px;
     border: 0;

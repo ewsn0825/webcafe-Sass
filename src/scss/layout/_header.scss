@@ -10,13 +10,13 @@
   gap: rem(16px);
 
 
-  @include respond-range(sm,lg){
-    background: blue;
-  }
+  // @include respond-range(sm,lg){
+  //   background: blue;
+  // }
 
   @include mobile{
 
-    // background: $dark-brown;
+    background: $dark-brown;
     color: $white;
     
   }

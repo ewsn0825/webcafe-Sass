@@ -398,10 +398,10 @@ legend {
 
 .button--burger {
   position: relative;
-  background: #38302e;
 }
 @media (max-width: 767px) {
   .button--burger {
+    background: transparent;
     width: 36px;
     height: 36px;
     border: 0;
@@ -447,13 +447,9 @@ legend {
   align-items: stretch;
   gap: 1rem;
 }
-@media (min-width: 576px) and (max-width: 991px) {
-  .appHeader {
-    background: blue;
-  }
-}
 @media (max-width: 767px) {
   .appHeader {
+    background: #38302e;
     color: #ffffff;
   }
 }
@@ -511,6 +507,56 @@ legend {
   .searchForm__group .formInput {
     width: 25rem;
   }
+}
+
+.menu {
+  color: #ffffff;
+  background: #988574;
+}
+@media (min-width: 768px) {
+  .menu__list {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+}
+@media (max-width: 767px) {
+  .is__active .menu__list {
+    transition: none;
+  }
+  .menu__list {
+    background: rgba(240, 230, 140, 0.85);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-150%);
+  }
+  .menu__item {
+    border-bottom: 1px solid #101010;
+  }
+}
+.menu__link {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
